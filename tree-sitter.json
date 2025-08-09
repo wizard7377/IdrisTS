@@ -1,0 +1,39 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "idris2",
+      "camelcase": "Idris2",
+      "title": "Idris2",
+      "scope": "source.idris2",
+      "file-types": [
+        "idr",
+        "lidr"
+      ],
+      "injection-regex": "^idris2$",
+      "class-name": "TreeSitterIdris2"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "BSD-2",
+    "description": "A dependently typed functional programming language, with QTT",
+    "authors": [
+      {
+        "name": "Asher Frost"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/tree-sitter/tree-sitter-idris2"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": false
+  }
+}

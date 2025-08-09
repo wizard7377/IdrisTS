@@ -1,0 +1,43 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/grammar.schema.json",
+  "name": "idris2",
+  "rules": {
+    "big_symbol": {
+      "type": "PATTERN",
+      "value": "[A-Z][a-zA-Z0-9\\'\\_]+"
+    },
+    "small_symbol": {
+      "type": "PATTERN",
+      "value": "[a-z][a-zA-Z0-9\\'\\_]+"
+    },
+    "_symbol": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "big_symbol"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "small_symbol"
+        }
+      ]
+    },
+    "source_file": {
+      "type": "STRING",
+      "value": "hello"
+    }
+  },
+  "extras": [
+    {
+      "type": "PATTERN",
+      "value": "\\s"
+    }
+  ],
+  "conflicts": [],
+  "precedences": [],
+  "externals": [],
+  "inline": [],
+  "supertypes": [],
+  "reserved": {}
+}
